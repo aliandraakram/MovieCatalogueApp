@@ -1,0 +1,97 @@
+{
+  "backdrop_path": "/Wu8kh7oyvaIfkNyMJyJHCamh5L.jpg",
+  "created_by": [
+    {
+      "id": 1778903,
+      "credit_id": "5f89759e39549a0037b749ae",
+      "name": "Moisés Zamora",
+      "gender": 0,
+      "profile_path": null
+    }
+  ],
+  "episode_run_time": 40,
+  "first_air_date": "2020-12-04",
+  "genres": "Drama",
+  "homepage": "https://www.netflix.com/title/81022733",
+  "id": 97180,
+  "in_production": true,
+  "languages": [
+    "en"
+  ],
+  "last_air_date": "2021-05-04",
+  "last_episode_to_air": {
+    "air_date": "2021-05-04",
+    "episode_number": 18,
+    "id": 2923576,
+    "name": "When All the World is Sleeping",
+    "overview": "Selena and Chris plan their future family. A distraught Yolanda asks for the singer's help and a grim tragedy occurs. \"Dreaming of You\" is released.",
+    "production_code": "",
+    "season_number": 1,
+    "still_path": "/bMVMCBLoGISmTzc6QFyR23nXx3V.jpg",
+    "vote_average": 0,
+    "vote_count": 0
+  },
+  "name": "Selena: The Series",
+  "next_episode_to_air": null,
+  "networks": [
+    {
+      "name": "Netflix",
+      "id": 213,
+      "logo_path": "/wwemzKWzjKYJFfCeiB57q3r4Bcm.png",
+      "origin_country": ""
+    }
+  ],
+  "number_of_episodes": 18,
+  "number_of_seasons": 1,
+  "origin_country": [
+    "US"
+  ],
+  "original_language": "en",
+  "original_name": "Selena: The Series",
+  "overview": "As Mexican-American Tejano singer Selena comes of age and realizes her dreams, she and her family make tough choices to hold on to love and music.",
+  "popularity": 560.025,
+  "poster_path": "/mYsWyfiIMxx4HDm0Wck7oJ9ckez.jpg",
+  "production_companies": [
+    {
+      "id": 4729,
+      "logo_path": null,
+      "name": "Q Productions",
+      "origin_country": "US"
+    },
+    {
+      "id": 141507,
+      "logo_path": null,
+      "name": "Campanario Entertainment",
+      "origin_country": "US"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "US",
+      "name": "United States of America"
+    }
+  ],
+  "seasons": [
+    {
+      "air_date": "2020-12-04",
+      "episode_count": 18,
+      "id": 164973,
+      "name": "Season 1",
+      "overview": "",
+      "poster_path": "/mYsWyfiIMxx4HDm0Wck7oJ9ckez.jpg",
+      "season_number": 1
+    }
+  ],
+  "spoken_languages": [
+    {
+      "english_name": "English",
+      "iso_639_1": "en",
+      "name": "English"
+    }
+  ],
+  "status": "Returning Series",
+  "tagline": "Every legend begins with a dream.",
+  "type": "Scripted",
+  "vote_average": 7.5,
+  "vote_count": 1310
+}

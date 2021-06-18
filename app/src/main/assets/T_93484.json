@@ -1,0 +1,103 @@
+{
+  "backdrop_path": "/braALW3UODI3aUV3wfrXpvvVzBl.jpg",
+  "created_by": [
+    {
+      "id": 1213074,
+      "credit_id": "5fe4946031644b0040f84e04",
+      "name": "Steven S. DeKnight",
+      "gender": 2,
+      "profile_path": "/5AsVXNHJTqhxfwxfhxKe7eeKMUu.jpg"
+    }
+  ],
+  "episode_run_time": 5,
+  "first_air_date": "2021-05-07",
+  "genres": "Sci-Fi & Fantasy, Action & Adventure, Drama",
+  "homepage": "https://www.netflix.com/title/80244953",
+  "id": 93484,
+  "in_production": true,
+  "languages": [
+    "en"
+  ],
+  "last_air_date": "2021-05-07",
+  "last_episode_to_air": {
+    "air_date": "2021-05-07",
+    "episode_number": 8,
+    "id": 2584271,
+    "name": "How It All Ends",
+    "overview": "As Walter's situation grows dire, Sheldon and Brandon join forces in a do-or-die showdown with a supervillain. Hutch runs into trouble during a heist.",
+    "production_code": "",
+    "season_number": 1,
+    "still_path": "/nsyd0XggnfX0STjJTTxth7zk6hk.jpg",
+    "vote_average": 0,
+    "vote_count": 0
+  },
+  "name": "Jupiter's Legacy",
+  "next_episode_to_air": null,
+  "networks": [
+    {
+      "name": "Netflix",
+      "id": 213,
+      "logo_path": "/wwemzKWzjKYJFfCeiB57q3r4Bcm.png",
+      "origin_country": ""
+    }
+  ],
+  "number_of_episodes": 8,
+  "number_of_seasons": 1,
+  "origin_country": [
+    "US"
+  ],
+  "original_language": "en",
+  "original_name": "Jupiter's Legacy",
+  "overview": "When the world's first generation of superheroes received their powers in the 1930s become the revered elder guard in the present, their superpowered children struggle to live up to the legendary feats of their parents.",
+  "popularity": 1182.741,
+  "poster_path": "/9yxep7oJdkj3Pla9TD9gKflRApY.jpg",
+  "production_companies": [
+    {
+      "id": 435,
+      "logo_path": "/AjzK0s2w1GtLfR4hqCjVSYi0Sr8.png",
+      "name": "Di Bonaventura Pictures",
+      "origin_country": "US"
+    },
+    {
+      "id": 51963,
+      "logo_path": null,
+      "name": "DeKnight Productions",
+      "origin_country": "US"
+    },
+    {
+      "id": 146221,
+      "logo_path": null,
+      "name": "Millarworld Production",
+      "origin_country": ""
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "US",
+      "name": "United States of America"
+    }
+  ],
+  "seasons": [
+    {
+      "air_date": "2021-05-07",
+      "episode_count": 8,
+      "id": 132121,
+      "name": "Volume 1",
+      "overview": "They're the first generation of superheroes. But as they pass the torch to their children, tensions are rising — and the old rules no longer apply.",
+      "poster_path": "/gSFDXb6IMXDSdw4avtzCVWouIfk.jpg",
+      "season_number": 1
+    }
+  ],
+  "spoken_languages": [
+    {
+      "english_name": "English",
+      "iso_639_1": "en",
+      "name": "English"
+    }
+  ],
+  "status": "Returning Series",
+  "tagline": "No legacy lives forever.",
+  "type": "Scripted",
+  "vote_average": 7.5,
+  "vote_count": 186
+}

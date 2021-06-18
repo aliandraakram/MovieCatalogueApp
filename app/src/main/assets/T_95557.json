@@ -1,0 +1,99 @@
+{
+  "backdrop_path": "/6UH52Fmau8RPsMAbQbjwN3wJSCj.jpg",
+  "created_by": [],
+  "episode_run_time": 45,
+  "first_air_date": "2021-03-26",
+  "genres": "Animation, Action & Adventure, Drama, Sci-Fi & Fantasy",
+  "homepage": "https://www.amazon.com/dp/B08WJP55PR",
+  "id": 95557,
+  "in_production": true,
+  "languages": [
+    "en"
+  ],
+  "last_air_date": "2021-04-30",
+  "last_episode_to_air": {
+    "air_date": "2021-04-30",
+    "episode_number": 8,
+    "id": 2832752,
+    "name": "WHERE I REALLY COME FROM",
+    "overview": "Mark must prove he's become the hero he's always wanted to be by stopping an unstoppable force.",
+    "production_code": "INVI 108",
+    "season_number": 1,
+    "still_path": "/ijDV8Z23iR5B2ftx0WggiXbfqGi.jpg",
+    "vote_average": 9.5,
+    "vote_count": 2
+  },
+  "name": "Invincible",
+  "next_episode_to_air": null,
+  "networks": [
+    {
+      "name": "Amazon",
+      "id": 1024,
+      "logo_path": "/ifhbNuuVnlwYy5oXA5VIb2YR8AZ.png",
+      "origin_country": ""
+    }
+  ],
+  "number_of_episodes": 8,
+  "number_of_seasons": 1,
+  "origin_country": [
+    "US"
+  ],
+  "original_language": "en",
+  "original_name": "Invincible",
+  "overview": "Mark Grayson is a normal teenager except for the fact that his father is the most powerful superhero on the planet. Shortly after his seventeenth birthday, Mark begins to develop powers of his own and enters into his father’s tutelage.",
+  "popularity": 1055.08,
+  "poster_path": "/yDWJYRAwMNKbIYT8ZB33qy84uzO.jpg",
+  "production_companies": [
+    {
+      "id": 20580,
+      "logo_path": "/tkFE81jJIqiFYPP8Tho57MXRQEx.png",
+      "name": "Amazon Studios",
+      "origin_country": "US"
+    },
+    {
+      "id": 151645,
+      "logo_path": null,
+      "name": "Skybound North",
+      "origin_country": "CA"
+    },
+    {
+      "id": 50032,
+      "logo_path": null,
+      "name": "Skybound Entertainment",
+      "origin_country": "US"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "CA",
+      "name": "Canada"
+    },
+    {
+      "iso_3166_1": "US",
+      "name": "United States of America"
+    }
+  ],
+  "seasons": [
+    {
+      "air_date": "2021-03-26",
+      "episode_count": 8,
+      "id": 136020,
+      "name": "Season 1",
+      "overview": "",
+      "poster_path": "/yDWJYRAwMNKbIYT8ZB33qy84uzO.jpg",
+      "season_number": 1
+    }
+  ],
+  "spoken_languages": [
+    {
+      "english_name": "English",
+      "iso_639_1": "en",
+      "name": "English"
+    }
+  ],
+  "status": "Returning Series",
+  "tagline": "",
+  "type": "Scripted",
+  "vote_average": 8.9,
+  "vote_count": 1635
+}
