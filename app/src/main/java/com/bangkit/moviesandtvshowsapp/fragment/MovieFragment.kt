@@ -6,18 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bangkit.moviesandtvshowsapp.adapter.MoviesAdapter
+import com.bangkit.moviesandtvshowapp.core.domain.model.Movie
+import com.bangkit.moviesandtvshowapp.core.vo.Status
 import com.bangkit.moviesandtvshowsapp.databinding.FragmentMovieBinding
-import com.bangkit.moviesandtvshowsapp.domain.model.Movie
 import com.bangkit.moviesandtvshowsapp.viewmodel.MovieViewmodel
-import com.bangkit.moviesandtvshowsapp.viewmodel.ViewModelFactory
-import com.bangkit.moviesandtvshowsapp.vo.Status
+import org.koin.android.viewmodel.ext.android.viewModel
 
 
 class MovieFragment : Fragment() {
 
+    private val viewModel: MovieViewmodel by viewModel()
     private var _binding: FragmentMovieBinding? = null
     private val binding get() = _binding!!
 
@@ -41,8 +41,6 @@ class MovieFragment : Fragment() {
                 adapter = movieAdapter
             }
 
-            val factory = ViewModelFactory.getInstance(requireActivity())
-            val viewModel = ViewModelProvider(this, factory)[MovieViewmodel::class.java]
 
             viewModel.getMovies().observe(viewLifecycleOwner, {
                 if (it != null) {

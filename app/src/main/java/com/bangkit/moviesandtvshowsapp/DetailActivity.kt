@@ -4,23 +4,21 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
+import com.bangkit.moviesandtvshowapp.core.domain.model.Movie
+import com.bangkit.moviesandtvshowapp.core.domain.model.TvShow
+import com.bangkit.moviesandtvshowapp.core.vo.Status
 import com.bangkit.moviesandtvshowsapp.databinding.ActivityDetailBinding
 import com.bangkit.moviesandtvshowsapp.databinding.ContentDetailBinding
-import com.bangkit.moviesandtvshowsapp.dataclass.entity.MoviesEntity
-import com.bangkit.moviesandtvshowsapp.dataclass.entity.TvShowsEntity
-import com.bangkit.moviesandtvshowsapp.domain.model.Movie
-import com.bangkit.moviesandtvshowsapp.domain.model.TvShow
 import com.bangkit.moviesandtvshowsapp.viewmodel.DetailViewModel
-import com.bangkit.moviesandtvshowsapp.viewmodel.ViewModelFactory
-import com.bangkit.moviesandtvshowsapp.vo.Status
 import com.bumptech.glide.Glide
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class DetailActivity : AppCompatActivity() {
+
+    private val viewModel: DetailViewModel by viewModel()
     private lateinit var binding: ContentDetailBinding
     private lateinit var favMovie: Movie
     private lateinit var favTvShowsEntity: TvShow
-    private lateinit var viewModel: DetailViewModel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,9 +32,6 @@ class DetailActivity : AppCompatActivity() {
 
         val id = intent.getIntExtra(ID, 0)
         val identifier = intent.getIntExtra(IDENTIFIER, 0)
-
-        val viewModelFactory = ViewModelFactory.getInstance(this)
-        viewModel = ViewModelProvider(this, viewModelFactory)[DetailViewModel::class.java]
 
         getDetail(id, identifier)
 

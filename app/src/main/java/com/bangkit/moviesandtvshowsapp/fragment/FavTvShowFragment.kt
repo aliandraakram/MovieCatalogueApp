@@ -5,16 +5,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bangkit.moviesandtvshowsapp.R
 import com.bangkit.moviesandtvshowsapp.adapter.TvShowAdapter
 import com.bangkit.moviesandtvshowsapp.databinding.FragmentFavTvShowBinding
 import com.bangkit.moviesandtvshowsapp.viewmodel.FavTvShowViewModel
-import com.bangkit.moviesandtvshowsapp.viewmodel.ViewModelFactory
+import org.koin.android.viewmodel.ext.android.viewModel
 
 
 class FavTvShowFragment : Fragment() {
+    private val viewModel: FavTvShowViewModel by viewModel()
     private var _binding: FragmentFavTvShowBinding? = null
     private val binding get() = _binding!!
 
@@ -32,21 +32,16 @@ class FavTvShowFragment : Fragment() {
 
         val favAdapter = TvShowAdapter()
 
-        binding.rvTvShows.apply {
-            layoutManager = LinearLayoutManager(context)
-            setHasFixedSize(true)
-            adapter = favAdapter
-        }
-
-        val factory = ViewModelFactory.getInstance(requireActivity())
-        val viewmodel = ViewModelProvider(this, factory)[FavTvShowViewModel::class.java]
-
         binding.progBar.visibility = View.VISIBLE
-        viewmodel.getFavTvShow().observe(viewLifecycleOwner, {
+        viewModel.getFavTvShow().observe(viewLifecycleOwner, {
             if (it != null){
+                binding.rvTvShows.apply {
+                    layoutManager = LinearLayoutManager(context)
+                    setHasFixedSize(true)
+                    adapter = favAdapter
+                }
                 favAdapter.setShow(it)
             } else {
-                binding.rvTvShows.visibility = View.GONE
                 binding.favListEmpty.text = resources.getString(R.string.favorite_list_empty)
             }
             binding.progBar.visibility = View.INVISIBLE

@@ -6,17 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bangkit.moviesandtvshowsapp.adapter.TvShowAdapter
+import com.bangkit.moviesandtvshowapp.core.domain.model.TvShow
+import com.bangkit.moviesandtvshowapp.core.vo.Status
 import com.bangkit.moviesandtvshowsapp.databinding.FragmentTvShowsBinding
-import com.bangkit.moviesandtvshowsapp.domain.model.TvShow
 import com.bangkit.moviesandtvshowsapp.viewmodel.TvShowsViewmodel
-import com.bangkit.moviesandtvshowsapp.viewmodel.ViewModelFactory
-import com.bangkit.moviesandtvshowsapp.vo.Status
+import org.koin.android.viewmodel.ext.android.viewModel
 
 
 class TvShowsFragment : Fragment() {
+    private val viewModel: TvShowsViewmodel by viewModel()
     private var _binding: FragmentTvShowsBinding? = null
     private val binding get() = _binding!!
 
@@ -31,8 +31,6 @@ class TvShowsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val viewModelFactory = ViewModelFactory.getInstance(requireActivity())
-        val viewModel = ViewModelProvider(this, viewModelFactory)[TvShowsViewmodel::class.java]
         val tvAdapter = TvShowAdapter()
 
         binding.rvTvShows.apply {

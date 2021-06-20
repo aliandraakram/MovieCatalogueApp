@@ -3,19 +3,16 @@ package com.bangkit.moviesandtvshowsapp.adapter
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.paging.PagedListAdapter
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.bangkit.moviesandtvshowapp.core.databinding.ItemMoviesBinding
+import com.bangkit.moviesandtvshowapp.core.domain.model.Movie
 import com.bangkit.moviesandtvshowsapp.DetailActivity
-import com.bangkit.moviesandtvshowsapp.databinding.ItemMoviesBinding
-import com.bangkit.moviesandtvshowsapp.dataclass.entity.MoviesEntity
-import com.bangkit.moviesandtvshowsapp.domain.model.Movie
 import com.bumptech.glide.Glide
 
 class MoviesAdapter : RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
     private val data = mutableListOf<Movie>()
 
-    fun setMovie(input: List<Movie>){
+    fun setMovie(input: List<Movie>) {
         data.clear()
         data.addAll(input)
         notifyDataSetChanged()

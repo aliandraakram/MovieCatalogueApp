@@ -3,20 +3,17 @@ package com.bangkit.moviesandtvshowsapp.adapter
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.paging.PagedListAdapter
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.bangkit.moviesandtvshowapp.core.databinding.ItemTvShowBinding
+import com.bangkit.moviesandtvshowapp.core.domain.model.TvShow
 import com.bangkit.moviesandtvshowsapp.DetailActivity
-import com.bangkit.moviesandtvshowsapp.databinding.ItemTvShowBinding
-import com.bangkit.moviesandtvshowsapp.dataclass.entity.TvShowsEntity
-import com.bangkit.moviesandtvshowsapp.domain.model.TvShow
 import com.bumptech.glide.Glide
 
-class TvShowAdapter : RecyclerView.Adapter<TvShowAdapter.ViewHolder>(){
+class TvShowAdapter : RecyclerView.Adapter<TvShowAdapter.ViewHolder>() {
 
     private val data = mutableListOf<TvShow>()
 
-    fun setShow(input: List<TvShow>){
+    fun setShow(input: List<TvShow>) {
         data.clear()
         data.addAll(input)
         notifyDataSetChanged()

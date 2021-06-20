@@ -5,16 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bangkit.moviesandtvshowsapp.R
 import com.bangkit.moviesandtvshowsapp.adapter.MoviesAdapter
 import com.bangkit.moviesandtvshowsapp.databinding.FragmentFavMovieBinding
 import com.bangkit.moviesandtvshowsapp.viewmodel.FavMovieViewModel
-import com.bangkit.moviesandtvshowsapp.viewmodel.ViewModelFactory
+import org.koin.android.viewmodel.ext.android.viewModel
 
 
 class FavMovieFragment : Fragment() {
+    private val viewModel: FavMovieViewModel by viewModel()
     private var _binding: FragmentFavMovieBinding? = null
     private val binding get() = _binding!!
 
@@ -32,21 +32,17 @@ class FavMovieFragment : Fragment() {
         if (activity != null) {
             val favAdapter = MoviesAdapter()
 
-            binding.rvMovies.apply {
-                layoutManager = LinearLayoutManager(context)
-                setHasFixedSize(true)
-                adapter = favAdapter
-            }
-
-            val factory = ViewModelFactory.getInstance(requireActivity())
-            val viewmodel = ViewModelProvider(this, factory)[FavMovieViewModel::class.java]
 
             binding.progBar.visibility = View.VISIBLE
-            viewmodel.getFavMovie().observe(viewLifecycleOwner, {
+            viewModel.getFavMovie().observe(viewLifecycleOwner, {
                 if (it != null) {
+                    binding.rvMovies.apply {
+                        layoutManager = LinearLayoutManager(context)
+                        setHasFixedSize(true)
+                        adapter = favAdapter
+                    }
                     favAdapter.setMovie(it)
                 } else {
-                    binding.rvMovies.visibility = View.GONE
                     binding.favListEmpty.text = resources.getString(R.string.favorite_list_empty)
                 }
                 binding.progBar.visibility = View.INVISIBLE
