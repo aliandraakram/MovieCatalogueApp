@@ -1,6 +1,6 @@
 package com.bangkit.moviesandtvshowapp.core.domain.model
 
-data class Movie (
+data class Movie(
     var movId: Int,
     var image: String,
     var title: String,
@@ -10,4 +10,4 @@ data class Movie (
     var genre: String,
     var duration: String,
     var isFavorited: Boolean
-        )
+)

@@ -1,6 +1,7 @@
 package com.bangkit.moviesandtvshowsapp
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -38,7 +39,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.menu_fav) {
-            startActivity(Intent(this, FavActivity::class.java))
+            val uri = Uri.parse("moviesandtvshowsapp://favorite")
+            startActivity(Intent(Intent.ACTION_VIEW, uri))
         }
         return super.onOptionsItemSelected(item)
     }

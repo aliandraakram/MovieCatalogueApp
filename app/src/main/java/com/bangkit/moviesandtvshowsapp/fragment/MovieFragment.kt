@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bangkit.moviesandtvshowsapp.adapter.MoviesAdapter
 import com.bangkit.moviesandtvshowapp.core.domain.model.Movie
 import com.bangkit.moviesandtvshowapp.core.vo.Status
+import com.bangkit.moviesandtvshowsapp.adapter.MoviesAdapter
 import com.bangkit.moviesandtvshowsapp.databinding.FragmentMovieBinding
 import com.bangkit.moviesandtvshowsapp.viewmodel.MovieViewmodel
 import org.koin.android.viewmodel.ext.android.viewModel

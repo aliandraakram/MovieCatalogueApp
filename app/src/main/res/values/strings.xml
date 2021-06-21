@@ -15,5 +15,5 @@
     <string name="home_title">Home</string>
     <string name="user_score">Score</string>
     <string name="button_favorite">button favorite</string>
-    <string name="favorite_list_empty">Favorite List Empty</string>
+    <string name="title_favorite">Favorite</string>
 </resources>

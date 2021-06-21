@@ -39,19 +39,21 @@ object DataMapper {
         }
 
     fun movieDetailResponseToEntity(data: MovieDetailResponse): MoviesEntity =
-        MoviesEntity(data.id,
-                data.posterPath,
-                data.title,
-                data.releaseDate,
-                data.overview,
-                data.voteAverage,
-                getGenre(data.genres),
-                data.runtime.toString(),
-                false
-            )
+        MoviesEntity(
+            data.id,
+            data.posterPath,
+            data.title,
+            data.releaseDate,
+            data.overview,
+            data.voteAverage,
+            getGenre(data.genres),
+            data.runtime.toString(),
+            false
+        )
 
     fun showDetailResponseToEntity(data: TvShowDetailResponse): TvShowsEntity =
-        TvShowsEntity(data.id,
+        TvShowsEntity(
+            data.id,
             data.posterPath,
             data.name,
             data.firstAirDate,
@@ -65,7 +67,8 @@ object DataMapper {
 
     fun listMovieEntityToMovie(data: List<MoviesEntity>): List<Movie> =
         data.map {
-            Movie(it.movId,
+            Movie(
+                it.movId,
                 it.image,
                 it.title,
                 it.date,
@@ -74,12 +77,13 @@ object DataMapper {
                 it.genre,
                 it.duration,
                 it.isFavorited
-                )
+            )
         }
 
     fun listShowEntitytoTvShow(data: List<TvShowsEntity>): List<TvShow> =
         data.map {
-            TvShow(it.tvId,
+            TvShow(
+                it.tvId,
                 it.image,
                 it.title,
                 it.date,
@@ -89,23 +93,25 @@ object DataMapper {
                 it.duration,
                 it.description,
                 it.isFavorited
-                )
+            )
         }
 
     fun movieToMovieEntity(data: Movie): MoviesEntity =
-        MoviesEntity(data.movId,
-                data.image,
-                data.title,
-                data.date,
-                data.description,
-                data.rating,
-                data.genre,
-                data.duration,
-                data.isFavorited
-            )
+        MoviesEntity(
+            data.movId,
+            data.image,
+            data.title,
+            data.date,
+            data.description,
+            data.rating,
+            data.genre,
+            data.duration,
+            data.isFavorited
+        )
 
-    fun tvShowToTvShowEntity(data: TvShow) : TvShowsEntity =
-        TvShowsEntity(data.tvId,
+    fun tvShowToTvShowEntity(data: TvShow): TvShowsEntity =
+        TvShowsEntity(
+            data.tvId,
             data.image,
             data.title,
             data.date,
@@ -115,10 +121,11 @@ object DataMapper {
             data.duration,
             data.description,
             data.isFavorited
-            )
+        )
 
     fun movieEntityToMovie(data: MoviesEntity): Movie =
-        Movie(data.movId,
+        Movie(
+            data.movId,
             data.image,
             data.title,
             data.date,
@@ -126,10 +133,12 @@ object DataMapper {
             data.rating,
             data.genre,
             data.duration,
-            data.isFavorited)
+            data.isFavorited
+        )
 
-    fun tvShowEntitytoTvShow(data:TvShowsEntity): TvShow =
-        TvShow(data.tvId,
+    fun tvShowEntitytoTvShow(data: TvShowsEntity): TvShow =
+        TvShow(
+            data.tvId,
             data.image,
             data.title,
             data.date,
@@ -138,12 +147,13 @@ object DataMapper {
             data.rating,
             data.duration,
             data.description,
-            data.isFavorited)
+            data.isFavorited
+        )
 
-    fun getGenre(list: List<GenresItem>): String{
+    fun getGenre(list: List<GenresItem>): String {
         var genre = ""
 
-        for (i in list.indices){
+        for (i in list.indices) {
             genre += "${list[i].name}, "
         }
 

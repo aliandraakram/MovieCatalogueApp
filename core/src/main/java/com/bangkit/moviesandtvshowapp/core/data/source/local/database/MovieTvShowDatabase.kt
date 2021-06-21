@@ -1,8 +1,6 @@
 package com.bangkit.moviesandtvshowapp.core.data.source.local.database
 
-import android.content.Context
 import androidx.room.Database
-import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.bangkit.moviesandtvshowapp.core.dataclass.entity.MoviesEntity
 import com.bangkit.moviesandtvshowapp.core.dataclass.entity.TvShowsEntity
@@ -16,21 +14,5 @@ abstract class MovieTvShowDatabase : RoomDatabase() {
 
     abstract fun movieTvShowDao(): Dao
 
-    companion object {
-        @Volatile
 
-        private var INSTANCE: MovieTvShowDatabase? = null
-
-        fun getInstance(context: Context): MovieTvShowDatabase =
-            INSTANCE ?: synchronized(this) {
-                Room.databaseBuilder(
-                    context.applicationContext,
-                    MovieTvShowDatabase::class.java,
-                    "MovieTvShow.db"
-                ).build().apply {
-                    INSTANCE = this
-                }
-            }
-
-    }
 }

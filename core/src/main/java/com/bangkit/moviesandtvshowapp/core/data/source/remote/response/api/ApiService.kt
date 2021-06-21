@@ -13,11 +13,17 @@ interface ApiService {
     suspend fun getMovieList(@Query("api_key") apiKey: String): MovieListResponse
 
     @GET("movie/{movie_id}")
-    suspend fun getDetailMovie(@Path("movie_id") id: Int, @Query("api_key") apiKey: String): MovieDetailResponse
+    suspend fun getDetailMovie(
+        @Path("movie_id") id: Int,
+        @Query("api_key") apiKey: String
+    ): MovieDetailResponse
 
     @GET("tv/popular")
     suspend fun getTvShowList(@Query("api_key") apiKey: String): TvShowListResponse
 
     @GET("tv/{tv_id}")
-    suspend fun getDetailShow(@Path("tv_id") id: Int, @Query("api_key") key: String): TvShowDetailResponse
+    suspend fun getDetailShow(
+        @Path("tv_id") id: Int,
+        @Query("api_key") key: String
+    ): TvShowDetailResponse
 }

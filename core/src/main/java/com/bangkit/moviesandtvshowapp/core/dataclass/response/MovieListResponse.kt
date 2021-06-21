@@ -8,7 +8,7 @@ data class MovieListResponse(
     @field:SerializedName("results")
     val results: List<ResultsMovies>,
 
-)
+    )
 
 data class ResultsMovies(
 
@@ -35,4 +35,4 @@ data class ResultsMovies(
     @field:SerializedName("id")
     val id: Int,
 
-)
+    )

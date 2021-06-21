@@ -39,5 +39,5 @@ data class TvShowDetailResponse(
     val episodeRunTime: List<Int>,
 
 
-)
+    )
 

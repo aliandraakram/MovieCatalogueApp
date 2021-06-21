@@ -32,7 +32,7 @@ class MovieTvShowRepository constructor(
         return object :
             NetworkBoundResources<List<Movie>, List<ResultsMovies>>(appExecutors) {
             public override fun loadFromDB(): Flow<List<Movie>> {
-              return localDataSource.getMovieList().map { DataMapper.listMovieEntityToMovie(it) }
+                return localDataSource.getMovieList().map { DataMapper.listMovieEntityToMovie(it) }
             }
 
             override fun shouldFetch(data: List<Movie>?): Boolean =
@@ -110,7 +110,7 @@ class MovieTvShowRepository constructor(
     }
 
     override fun getFavMovie(): Flow<List<Movie>> {
-        return localDataSource.getFavMovie().map{
+        return localDataSource.getFavMovie().map {
             DataMapper.listMovieEntityToMovie(it)
         }
     }

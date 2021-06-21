@@ -32,7 +32,7 @@ data class MovieDetailResponse(
     @field:SerializedName("vote_average")
     val voteAverage: Double,
 
-)
+    )
 
 
 data class GenresItem(

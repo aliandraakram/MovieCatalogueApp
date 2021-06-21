@@ -16,14 +16,13 @@ import kotlinx.coroutines.flow.flowOn
 class RemoteDataSource constructor(private val api: ApiService) {
 
 
-
     @SuppressLint("CheckResult")
     fun getMovieList(key: String): Flow<ApiResponse<List<ResultsMovies>>> {
         return flow {
             try {
                 val response = api.getMovieList(key)
                 val result = response.results
-                if (result.isNotEmpty()){
+                if (result.isNotEmpty()) {
                     emit(ApiResponse.Success(result))
                 } else {
                     emit(ApiResponse.Empty)
@@ -41,7 +40,7 @@ class RemoteDataSource constructor(private val api: ApiService) {
             try {
                 val response = api.getTvShowList(key)
                 val result = response.results
-                if (result.isNotEmpty()){
+                if (result.isNotEmpty()) {
                     emit(ApiResponse.Success(result))
                 } else {
                     emit(ApiResponse.Empty)

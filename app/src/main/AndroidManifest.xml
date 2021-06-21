@@ -12,7 +12,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MoviesAndTvShowsApp">
-        <activity android:name=".FavActivity"></activity>
         <activity
             android:name=".SplashScreenActivity"
             android:theme="@style/Theme.MoviesAndTvShowsApp.NoActionBar">
@@ -26,7 +25,7 @@
             android:name=".DetailActivity"
             android:label="@string/title_activity_detail"
             android:theme="@style/Theme.MoviesAndTvShowsApp.NoActionBar" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity"/>
     </application>
 
 </manifest>

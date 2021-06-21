@@ -5,12 +5,11 @@ import com.google.gson.annotations.SerializedName
 data class TvShowListResponse(
 
 
-
     @field:SerializedName("results")
     val results: List<ResultsTvShows>,
 
 
-)
+    )
 
 data class ResultsTvShows(
 
@@ -32,4 +31,4 @@ data class ResultsTvShows(
     @field:SerializedName("id")
     val id: Int,
 
-)
+    )

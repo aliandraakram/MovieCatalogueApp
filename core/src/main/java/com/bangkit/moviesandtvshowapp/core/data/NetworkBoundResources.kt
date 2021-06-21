@@ -31,7 +31,6 @@ abstract class NetworkBoundResources<ResultType, RequestType>(private val mExecu
     }
 
 
-
     protected fun onFetchFailed() {}
 
     protected abstract fun loadFromDB(): Flow<ResultType>

@@ -23,8 +23,9 @@ class MyApp : Application() {
                     networkModule,
                     repoModule,
                     useCaseModule,
-                    viewModelModule
-                )
+                    viewModelModule,
+
+                    )
             )
         }
     }
