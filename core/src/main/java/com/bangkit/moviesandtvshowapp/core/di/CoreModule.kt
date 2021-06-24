@@ -8,6 +8,8 @@ import com.bangkit.moviesandtvshowapp.core.data.source.remote.RemoteDataSource
 import com.bangkit.moviesandtvshowapp.core.data.source.remote.response.api.ApiService
 import com.bangkit.moviesandtvshowapp.core.domain.repository.MovieTvShowDataSource
 import com.bangkit.moviesandtvshowapp.core.utils.AppExecutors
+import net.sqlcipher.database.SQLiteDatabase
+import net.sqlcipher.database.SupportFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -20,11 +22,13 @@ import java.util.concurrent.TimeUnit
 val dbModule = module {
     factory { get<MovieTvShowDatabase>().movieTvShowDao() }
     single {
+        val pass: ByteArray = SQLiteDatabase.getBytes("movietvshow".toCharArray())
+        val factory = SupportFactory(pass)
         Room.databaseBuilder(
             androidContext(),
             MovieTvShowDatabase::class.java,
             "MovieTvShow.db"
-        ).fallbackToDestructiveMigration().build()
+        ).fallbackToDestructiveMigration().openHelperFactory(factory).build()
     }
 }
 
