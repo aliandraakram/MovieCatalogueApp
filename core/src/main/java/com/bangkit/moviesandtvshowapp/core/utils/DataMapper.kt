@@ -31,7 +31,7 @@ object DataMapper {
                 it.firstAirDate,
                 0,
                 " ",
-                0.0,
+                it.voteAverage,
                 " ",
                 it.overview,
                 false
