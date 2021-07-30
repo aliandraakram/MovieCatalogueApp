@@ -1,5 +1,6 @@
 package com.bangkit.moviesandtvshowapp.core.data.source
 
+import android.util.Log
 import com.bangkit.moviesandtvshowapp.core.data.NetworkBoundResources
 import com.bangkit.moviesandtvshowapp.core.data.source.local.LocalDataSource
 import com.bangkit.moviesandtvshowapp.core.data.source.remote.RemoteDataSource
@@ -42,6 +43,7 @@ class MovieTvShowRepository constructor(
                 remoteDataSource.getMovieList(key)
 
             override suspend fun saveCallResult(data: List<ResultsMovies>) {
+                Log.d("onMovieListRepo", data.toString())
                 val list = DataMapper.movieListToEntity(data)
                 localDataSource.insertMovieList(list)
             }
@@ -64,6 +66,7 @@ class MovieTvShowRepository constructor(
                 remoteDataSource.getTvShowList(key)
 
             override suspend fun saveCallResult(data: List<ResultsTvShows>) {
+                Log.d("onShowListRepo", data.toString())
                 val list = DataMapper.showListToEntity(data)
                 localDataSource.insertTvShowList(list)
             }
@@ -82,6 +85,7 @@ class MovieTvShowRepository constructor(
                 remoteDataSource.getMovie(id, key)
 
             override suspend fun saveCallResult(data: MovieDetailResponse) {
+                Log.d("onMovieRepo", data.toString())
                 val result = DataMapper.movieDetailResponseToEntity(data)
                 appExecutors.diskIO().execute { localDataSource.updateMovie(result, false) }
 
@@ -103,6 +107,7 @@ class MovieTvShowRepository constructor(
                 remoteDataSource.getTvShow(id, key)
 
             override suspend fun saveCallResult(data: TvShowDetailResponse) {
+                Log.d("onShowRepo", data.toString())
                 val result = DataMapper.showDetailResponseToEntity(data)
                 appExecutors.diskIO().execute { localDataSource.updateTvShow(result, false) }
             }
