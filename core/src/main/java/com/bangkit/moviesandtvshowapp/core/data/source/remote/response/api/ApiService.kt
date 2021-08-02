@@ -9,7 +9,7 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface ApiService {
-    @GET("movie/popular")
+    @GET("movie/top_rated")
     suspend fun getMovieList(@Query("api_key") apiKey: String): MovieListResponse
 
     @GET("movie/{movie_id}")
@@ -18,7 +18,7 @@ interface ApiService {
         @Query("api_key") apiKey: String
     ): MovieDetailResponse
 
-    @GET("tv/popular")
+    @GET("tv/top_rated")
     suspend fun getTvShowList(@Query("api_key") apiKey: String): TvShowListResponse
 
     @GET("tv/{tv_id}")
